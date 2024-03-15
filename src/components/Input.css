@@ -1,0 +1,44 @@
+.form-container {
+    border-top: 0.5px solid rgb(215, 215, 215);
+    border-bottom: 0.5px solid rgb(215, 215, 215);
+    padding: 1rem;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form input, .form select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.add-btn {
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #357a39;
+}
+
+.error-message {
+    color: white;
+    font-weight: 500;
+    background-color: rgb(210, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
