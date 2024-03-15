@@ -5,7 +5,7 @@ import './ExpenseItem.css';
 const ExpenseItem = ({expense}) => {
     const { dispatch } = useExpenseContext();
     return (
-        <tr>
+        <tr className={'item-row'}>
             <td>{expense.title}</td>
             <td>{expense.amount}€</td>
             <td>{expense.category}</td>

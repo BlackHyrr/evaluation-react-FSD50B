@@ -16,7 +16,7 @@ const ExpensesList = () => {
     );
 
     return (
-        <div className={'list-container'}>
+        <div className={'list-container container'}>
             <select className={'filter-btn'} value={selectedCategory} onChange={handleCategoryChange}>
                 <option value="">Toute catégories</option>
                 {categories.map((category, index) => (

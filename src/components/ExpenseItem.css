@@ -10,6 +10,10 @@
     transition: 0.3s;
 }
 
+.item-row:hover {
+    background-color: #edfaff;;
+} 
+
 .delete-btn:hover {
     background-color: #c50000;
 }

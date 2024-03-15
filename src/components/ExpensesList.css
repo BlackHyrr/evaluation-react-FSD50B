@@ -1,8 +1,7 @@
 .list-container {
-    margin-top: 20px;
-    padding: 20px;
-    width: 50%;
-    margin: 40px auto 0 auto;
+    padding: 40px;
+    margin-top: 60px !important;
+    box-shadow: 0 0 10px 1px whitesmoke;
 }
 
 .filter-btn {
