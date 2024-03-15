@@ -37,9 +37,8 @@ const ExpensesList = () => {
                         <ExpenseItem key={index} expense={expense} />
                     ))}
                     {filteredExpenses.length === 0 
-                        && <tr><td className={'full-col'} colSpan={4}>Aucune dépense</td></tr>}
-                    {filteredExpenses.length !== 0 
-                        && <tr><td className={'full-col'} colSpan={4}>Total: {filteredExpenses.reduce((acc, expense) => acc + parseFloat(expense.amount), 0)}€</td></tr>}
+                        ? <tr><td className={'full-row row-border-bottom'} colSpan={4}>Aucune dépense</td></tr>
+                        : <tr><td className={'full-row'} colSpan={4}>Total: {filteredExpenses.reduce((acc, expense) => acc + parseFloat(expense.amount), 0).toFixed(2)}€</td></tr>}
                 </tbody>
             </table>
         </div>

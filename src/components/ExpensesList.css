@@ -23,8 +23,8 @@ table {
 }
 
 table th {
-    background-color: #5fb5d6;
-    color: white;
+    background-color: #f2f4fc;
+    color: #383a75;
     padding: 1rem;
 }
 
@@ -52,14 +52,14 @@ table td {
 }
 
 tbody td {
-    border-top: 0.5px solid rgb(215, 215, 215);
+    border-bottom: 0.5px solid #f2f4fc;
 }
 
-.full-col {
+.full-row {
     margin-top: 2rem;
-    border-top: 0.5px solid rgb(215, 215, 215);
     text-align: center;
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
+    border: none;
 }

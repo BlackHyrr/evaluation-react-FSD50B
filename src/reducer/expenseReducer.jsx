@@ -24,7 +24,10 @@ const expenseReducer = (state, action) => {
             return { ...state, input: { ...state.input, category: action.payload } };
 
         case 'addExpense':
-            if(isNaN(parseFloat(state.input.amount))) {
+            if(state.input.amount.includes(',')) {
+                state.input.amount = state.input.amount.replace(',', '.');
+            }
+            if(!/^\d+(\.\d+)?$/.test(state.input.amount)) {
                 return {
                     ...state,
                     errorMessage: 'Le montant doit être un nombre.'
