@@ -12,8 +12,8 @@ const SelectCategory = () => {
         <select name={'select'} value={state.input.category} onChange={handleChange}>
             <option value={''}>Choisir une catégorie</option>
             {categories && 
-                categories.map((category, index) => {
-                    return <option key={index} value={category}>{category}</option>
+                categories.map((category) => {
+                    return <option key={category} value={category}>{category}</option>
             })}
         </select>
     );

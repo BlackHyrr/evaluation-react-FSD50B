@@ -14,6 +14,14 @@ const Input = () => {
         dispatch({ type: 'setAmount', payload: e.target.value });
     };
 
+    const handleAddExpense = () => {
+        if (state.input.title.trim() && state.input.amount && state.input.category.trim()) {
+            dispatch({ type: 'addExpense' })
+        } else {
+            dispatch({ type: 'error', payload: 'Veuillez rentrer un titre, un montant et une catégorie pour la dépense.' })
+        }
+    };
+
     return (
         <>
             <div className={'form-container'}>
@@ -33,13 +41,7 @@ const Input = () => {
                     <SelectCategory />
                     <button
                         className={'add-btn'}
-                        onClick={() => {
-                            if (state.input.title && state.input.amount && state.input.category) {
-                                dispatch({ type: 'addExpense' })
-                            } else {
-                                dispatch({ type: 'error', payload: 'Veuillez rentrer un titre, un montant et une catégorie pour la dépense.' })
-                            }
-                        }} >Ajouter</button>
+                        onClick={handleAddExpense}>Ajouter</button>
                 </div>
                 {
                     error !== '' && <p className={'error-message'}>{error}</p>

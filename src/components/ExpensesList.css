@@ -21,7 +21,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    table-layout: fixed;
 }
 
 table th {
@@ -30,15 +29,19 @@ table th {
     padding: 1rem;
 }
 
-tr td:first-child, tr th:first-child {
-    width: 600px
+tr td:first-child,
+tr th:first-child {
+    width: auto;
 }
 
-tr td:last-child, tr th:last-child {
-    width: 10%;
-    white-space: nowrap;
+tr td:last-child, 
+tr td:nth-last-child(2), 
+tr td:nth-last-child(3),
+tr th:last-child,
+tr th:nth-last-child(2),
+tr th:nth-last-child(3) {
+    width: 15%;
 }
-
 
 table td {
     padding: 1rem;

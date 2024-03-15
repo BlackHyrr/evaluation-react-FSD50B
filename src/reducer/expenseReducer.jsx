@@ -1,4 +1,4 @@
-let id = 0;
+import { v4 as uuidv4 } from 'uuid';
 
 export const initialState = {
     input: {
@@ -13,13 +13,6 @@ export const initialState = {
 const expenseReducer = (state, action) => {
 
     switch(action.type) {
-
-        case 'changeValue':
-            return {
-                ...state,
-                input: action.payload,
-                errorMessage: ''
-            }
 
         case 'setTitle':
             return { ...state, input: { ...state.input, title: action.payload } };
@@ -38,7 +31,7 @@ const expenseReducer = (state, action) => {
                 }
             }
             const newExpense = {
-                id: id++,
+                id: uuidv4(),
                 title: state.input.title,
                 amount: state.input.amount,
                 category: state.input.category

@@ -4,9 +4,8 @@ import ExpenseItem from "./ExpenseItem";
 import './ExpensesList.css';
 
 const ExpensesList = () => {
-    const { state } = useExpenseContext();
+    const { state, categories } = useExpenseContext();
     const [selectedCategory, setSelectedCategory] = useState('');
-    const { categories } = useExpenseContext();
 
     const handleCategoryChange = (e) => {
         setSelectedCategory(e.target.value);
