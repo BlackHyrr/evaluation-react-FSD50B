@@ -2,6 +2,7 @@
     border-top: 0.5px solid rgb(215, 215, 215);
     border-bottom: 0.5px solid rgb(215, 215, 215);
     padding: 1rem;
+    position: relative;
 }
 
 .form-container .form {
@@ -36,9 +37,11 @@
 }
 
 .error-message {
-    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    color: red;
     font-weight: 500;
-    background-color: rgb(210, 0, 0);
     text-align: center;
-    padding: 20px;
+    padding: 12px;
 }

@@ -15,8 +15,8 @@ const Input = () => {
     };
 
     return (
-        <div className={'form-container'}>
-            <div>
+        <>
+            <div className={'form-container'}>
                 <div className={'form container'}>
                     <input
                         type='text'
@@ -45,8 +45,7 @@ const Input = () => {
                     error !== '' && <p className={'error-message'}>{error}</p>
                 }
             </div>
-        </div>
-
+        </>
     )
 }
 
