@@ -6,8 +6,6 @@ const Input = () => {
     const { state, dispatch } = useExpenseContext();
     const error = state.errorMessage;
 
-    console.log(state)
-
     const handleTitleChange = (e) => {
         dispatch({ type: 'setTitle', payload: e.target.value });
     };

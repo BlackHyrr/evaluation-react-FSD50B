@@ -31,6 +31,12 @@ const expenseReducer = (state, action) => {
             return { ...state, input: { ...state.input, category: action.payload } };
 
         case 'addExpense':
+            if(isNaN(parseFloat(state.input.amount))) {
+                return {
+                    ...state,
+                    errorMessage: 'Le montant doit être un nombre.'
+                }
+            }
             const newExpense = {
                 id: id++,
                 title: state.input.title,
